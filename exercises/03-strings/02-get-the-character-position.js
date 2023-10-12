@@ -19,3 +19,10 @@ let letter = "i"; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const characterPosition = firstName.indexOf(letter);
+console.log(characterPosition);
+
+
+
+
+
