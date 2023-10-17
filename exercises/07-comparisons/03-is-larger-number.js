@@ -10,3 +10,13 @@ let num2 = 20; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let isLargerNumber
+
+if (num2 > num1 ){
+    isLargerNumber = true; 
+}else if(num1 > num2){
+    isLargerNumber = false;
+}else{
+    isLargerNumber = false;
+}

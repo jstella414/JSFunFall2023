@@ -55,11 +55,14 @@
 
         const displayMessage = () => {
           // I can see "isLoggedIn" from here.
+          if(isLoggedIn){
+            document.querySelector("#message").textContent = "Welcome back!";
+          }else{
+            document.querySelector("#message").textContent = "Please login";
 
+          }
           // Change the line below so that it only executes if "isLoggedIn" is true
-          document.querySelector("#message").textContent = "Welcome back!";
           // Change this line below so that it only executes if "isLoggedIn" is false
-          document.querySelector("#message").textContent = "Please login";
         };
 
         // Do not change anything below
@@ -87,3 +90,7 @@
     </script>
   </body>
 </html>
+
+<!---
+use an if statment to solve
+-->

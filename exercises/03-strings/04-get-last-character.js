@@ -10,3 +10,9 @@ let str = "Wes Craven"; // e.g.
 
 // WRITE YOUR ANSWER BELOW THIS LINE
 const lastCharacter = str[str.length -1];
+const figureitout = str.indexOf('n');
+figureitout
+
+///.length does not use index logic and you have to subtract one
+
+console.log(str.length);
