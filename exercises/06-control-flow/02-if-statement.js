@@ -22,3 +22,5 @@ if(tip){
     total = subtotal;
     console.log(total)
 }
+
+///multiplication is priortized over addition

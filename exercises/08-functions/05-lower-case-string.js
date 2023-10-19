@@ -16,3 +16,13 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const lowerCaseString = (word) =>{
+    if (typeof word === 'string'){
+        return word.toLowerCase()
+    // }else{
+    //    return 'this is not a string';
+    }
+}
+
+
+console.log(lowerCaseString("dfdf"));

@@ -19,3 +19,5 @@ if(userInput1 === userInput2){
 }else{
     isEqual = false;
 }
+
+// isEqual = userInput1 === userInput2;
