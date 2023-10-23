@@ -14,10 +14,13 @@
 // WRITE YOUR ANSWER BELOW THIS LINE
 
 const isEvenOrOdd = (num) => {
-    if(num % 2 == 0){
-        return 'even'
-    }else{
-        return 'odd'
-    }
+    return num % 2 === 0 ? 'even' : 'odd';
+    
+    // if(num % 2 === 0){
+    //     return 'even'
+    // }else{
+    //     return 'odd'
+    // }
 }
-console.log(isEvenOrOdd(6))
+
+console.log(isEvenOrOdd())

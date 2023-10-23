@@ -20,3 +20,4 @@ if (day === "Saturday"|| day === "Sunday"){
 }else{
     isWeekend = false;
 }
+

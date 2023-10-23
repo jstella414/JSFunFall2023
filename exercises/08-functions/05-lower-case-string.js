@@ -25,4 +25,4 @@ const lowerCaseString = (word) =>{
 }
 
 
-console.log(lowerCaseString("dfdf"));
+console.log(lowerCaseString("fdf"));
