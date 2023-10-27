@@ -15,3 +15,7 @@ let student = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+//student.name = "Joe Stella";
+student["name"] = "Joe Stella";
+student["skills"].push("CSS")

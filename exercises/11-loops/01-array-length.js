@@ -6,3 +6,7 @@ let planets = ["Pluto", "Saturn", "Mar"]; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+planets.length
+
+const length = planets.length;

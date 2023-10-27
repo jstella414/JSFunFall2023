@@ -4,4 +4,4 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
-const restaurants = ["Mcdonald's", "Wendy's", "Burger King"]
+const restaurants = ["cdonald's", "Wendy's", "Burger King"]

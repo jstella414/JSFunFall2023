@@ -8,3 +8,10 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let myDog = {
+name:"Fluffy",
+breed: "golden retriever", 
+age: 2,
+owners: ["Joe","James"]
+}

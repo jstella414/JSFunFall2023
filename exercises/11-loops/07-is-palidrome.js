@@ -11,3 +11,20 @@ let string = "racecar";
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let isPalindrome = true;
+
+let reverse = []
+let seperated = string.split("");
+console.log(seperated)
+
+for(let i = (string.length -1); i >= 0 ; i--){
+    reverse.push(seperated[i])
+}
+
+let reversedWord = reverse.join('')
+console.log(reversedWord);
+
+reversedWord === string ? isPalindrome = true : isPalindrome = false;
+
+console.log(isPalindrome)
