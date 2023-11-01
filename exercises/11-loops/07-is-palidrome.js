@@ -12,19 +12,43 @@ let string = "racecar";
 
 // WRITE YOUR ANSWER BELOW THIS LINE
 
+//if isPalindrome === word set palindrome to true!
+//iterate through string backward to get backwards word
+
 let isPalindrome = true;
 
-let reverse = []
-let seperated = string.split("");
-console.log(seperated)
+let splitword = string.split('');
+let reversedWord = [];
 
-for(let i = (string.length -1); i >= 0 ; i--){
-    reverse.push(seperated[i])
+for(let i = (string.length -1); i >= 0; i--){
+
+    reversedWord.push(string[i]);
+
 }
 
-let reversedWord = reverse.join('')
-console.log(reversedWord);
+reversedWord = reversedWord.join('');
+reversedWord === string ? isPalindrome = true: isPalindrome = false;
 
-reversedWord === string ? isPalindrome = true : isPalindrome = false;
 
-console.log(isPalindrome)
+
+
+
+
+
+
+
+// let isPalindrome = true;
+
+// let reverse = []
+// let seperated = string.split("");
+// console.log(seperated) 
+// for(let i = (string.length -1); i >= 0 ; i--){
+//     reverse.push(seperated[i])
+// }
+
+// let reversedWord = reverse.join('')
+// console.log(reversedWord);
+
+// reversedWord === string ? isPalindrome = true : isPalindrome = false;
+
+// console.log(isPalindrome)

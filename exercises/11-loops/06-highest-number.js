@@ -8,7 +8,7 @@ let numbers = [10000, -8, 10, 0.7]; // e.g.
 
 // WRITE YOUR ANSWER BELOW THIS LINE
 
-let highest = -1000;
+let highest = numbers[0];
 
 
 for (let num of numbers){

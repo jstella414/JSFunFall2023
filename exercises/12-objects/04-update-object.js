@@ -18,4 +18,5 @@ let student = {
 
 //student.name = "Joe Stella";
 student["name"] = "Joe Stella";
-student["skills"].push("CSS")
+student["skills"].push("CSS");
+
