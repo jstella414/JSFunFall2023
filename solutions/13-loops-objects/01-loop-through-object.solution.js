@@ -1,30 +1,32 @@
-/**
- * Loop through all properties within the "links" object
- * an return a list of HTML links.
- * @param {object} links e.g. { Text: "https://url.com" }
- * @returns {string} of <a> tags
- *
- * @example
- *
- * const links = {
- *   Dogs: "http://www.omfgdogs.com",
- *   Kittens: "https://giphy.com/search/kitten",
- *   "Hamster Dance": "https://hamster.dance/hamsterdance/",
- * };
- *
- * generateLinks(links);
- * // <a href="http://www.omfgdogs.com">Dogs</a><a href="https://giphy.com/search/kitten">Kittens</a><a href="https://hamster.dance/hamsterdance/">Hamster Dance</a>
- */
-
-const generateLinks = (links) => {
-  // WRITE YOUR ANSWER HERE
-  let html = "";
-  for (let title in links) {
-    html += `<a href="${links[title]}">${title}</a>`;
-  }
-  return html;
+const links = {
+  Dogs: "http://www.omfgdogs.com",
+  Kittens: "https://giphy.com/search/kitten",
+  "Hamster Dance": "https://hamster.dance/hamsterdance/",
 };
 
-// IGNORE THIS BELOW. It is for the tests.
+/**
+ * Create an variable called "html".
+ * Loop through all properties within the "links" object
+ * and set "html" to a list of HTML links.
+ *
+ * @example
+ * console.log(html);
+ * // <a href="http://www.omfgdogs.com">Dogs</a><a href="https://giphy.com/search/kitten">Kittens</a><a href="https://hamster.dance/hamsterdance/">Hamster Dance</a>
+ *
+ * Your answer should still work when "links" has different keys and values.
+ */
 
-export default generateLinks;
+// WRITE YOUR ANSWER BELOW THIS LINE
+
+// Solution 1
+let html = "";
+for (let text in links) {
+  const href = links[text];
+  html = html + '<a href="' + href + '">' + text + "</a>";
+}
+
+// Solution 2
+let html = "";
+for (let [text, href] of Object.entries(links)) {
+  html += `<a href="${href}">${text}</a>`;
+}
