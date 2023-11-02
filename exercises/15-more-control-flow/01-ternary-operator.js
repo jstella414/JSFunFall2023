@@ -11,3 +11,13 @@ let num = 8; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+
+let isEvenOrOdd = num % 2 === 0 ? "even" : "odd";
+
+
+// const oddOrEven = (num) => {
+//     return num % 2 === 0 ? "even" : "odd";
+// }
+
+// console.log(oddOrEven())

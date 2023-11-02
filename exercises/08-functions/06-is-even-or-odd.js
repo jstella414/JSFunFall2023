@@ -15,12 +15,6 @@
 
 const isEvenOrOdd = (num) => {
     return num % 2 === 0 ? 'even' : 'odd';
-    
-    // if(num % 2 === 0){
-    //     return 'even'
-    // }else{
-    //     return 'odd'
-    // }
 }
 
 console.log(isEvenOrOdd())

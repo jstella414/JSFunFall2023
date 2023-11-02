@@ -21,7 +21,8 @@ const newItem = { name: "Popcorn", price: 5 }; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
-let newShoppingCart = {...shoppingCart, ...newItem}
 
-console.log(newShoppingCart)
-
+const newShoppingCart = structuredClone(shoppingCart);
+newShoppingCart.push(structuredClone(newItem));
+console.log(newShoppingCart);
+  
