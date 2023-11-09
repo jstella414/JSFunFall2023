@@ -24,3 +24,13 @@ const links = [
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+
+const allLinks = (link, i, array) =>{
+
+htmlStr += `<a href="${link}"> ${i + 1}. ${link}</a>`;
+}
+
+
+
+links.forEach(allLinks)
