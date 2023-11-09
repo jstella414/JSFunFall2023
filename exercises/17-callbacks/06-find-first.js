@@ -41,7 +41,14 @@ const isNumberTwoDigits = (num) => {
  */
 
 const findFirst = (arrayOfNum, callback) => {
-  // WRITE YOUR ANSWER IN HERE
+    for (let num of arrayOfNum){
+      let holdNum = callback(num);
+      if (holdNum === true)
+      {
+        return num;
+      }
+    }  
+    
 };
 
 /**

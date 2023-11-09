@@ -6,6 +6,7 @@
 
 const returnAnswer = (personName) => {
   // WRITE YOUR ANSWER IN HERE
+  return personName;
 };
 
 // Uncomment me to test in Quokka
@@ -14,3 +15,5 @@ const returnAnswer = (personName) => {
 // DO NOT DELETE BELOW. It is for the tests.
 
 export { returnAnswer };
+
+
