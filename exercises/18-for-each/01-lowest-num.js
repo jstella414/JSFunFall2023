@@ -10,17 +10,13 @@ const numbers = [1, 10, -2, 3, 4]; // e.g.
 
 // WRITE YOUR ANSWER BELOW THIS LINE
 
- for(let i = 0; i < numbers.length; i++){
-    
- }
-
 
 const allNumbers = (num) =>{
 if(num < lowestNumber){
     lowestNumber = num;
 }
     }
-
-    console.log(lowestNumber)
     
     numbers.forEach(allNumbers);
+    console.log(lowestNumber)
+    

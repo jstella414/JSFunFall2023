@@ -12,4 +12,42 @@
  */
 (function () {
   // Put your answers in here
+
+
+const firstLi = document.querySelector("li");
+console.log(firstLi)
+
+const link = document.querySelector("#myId");
+console.log(link)
+
+const warning = document.querySelectorAll(".bg-warning");
+for(let text of warning){
+  console.log(text)
+
+};
+
+
+document.querySelectorAll("section");
+const targetMe = document.querySelector("#targetMe");
+
+console.log(targetMe)
+
+const hyperLinks = document.querySelectorAll('.hyperlinks');
+for (let link of hyperLinks){
+  console.log(link)
+
+}
+
+const links = document.querySelectorAll("#socialsmedia");
+for (let link of links) {
+  console.log(link);
+}
+
+
+const row = document.querySelectorAll("#myRow");
+for (let cells of row) {
+  console.log(cells);
+}
+
+
 })();
