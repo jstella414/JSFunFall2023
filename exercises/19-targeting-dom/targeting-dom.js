@@ -44,7 +44,7 @@ for (let link of links) {
 }
 
 
-const row = document.querySelectorAll("#myRow");
+const row = document.querySelectorAll("#myRow .col .col-xs .border");
 for (let cells of row) {
   console.log(cells);
 }

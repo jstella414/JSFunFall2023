@@ -12,13 +12,22 @@
     />
     <script>
       (function () {
-        /**
+          /**
          * Question 1: Use console.log to log the image url (the src)
+         
          * Question 2: Change the image (the src)
          * Question 3: Add an alt attribute to the image
          *
          * Write your answers to each question below
          */
+  
+  
+        const img = document.querySelector("img");
+        console.log(img.src);
+        img.src = "https://place-hold.it/500x500";
+        img.alt = "this is now placeholder"
+
+      
       })();
     </script>
   </body>
