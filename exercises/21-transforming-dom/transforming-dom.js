@@ -23,15 +23,9 @@ const ConditionalBotton = document.querySelector('#alertConditionalBotton');
 const buttonIsCorrect = document.querySelector('.conditionalText');
 
 
-if (ConditionalBotton.classList.contains("btn-primary")) {
-  buttonIsCorrect.textContent = "✓ blue";
-}
-
-/*Using conditional logic 
-(e.g. an if statement), change the <div> below to say 
-"✓ blue" if  has class btn-primary.
-*/
-
+  if (ConditionalBotton.classList.contains("btn-primary")) {
+    buttonIsCorrect.textContent = "✓ blue";
+  }
 // Put your answers in here
 
 })();
