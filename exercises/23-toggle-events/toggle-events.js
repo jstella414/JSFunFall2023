@@ -5,6 +5,15 @@
    * When the user clicks on the "Accept Cookies" button, the "Accept Cookies" popup should disappear.
    */
   // Write your answer here
+
+const cookiesButton = document.querySelector("#acceptCookiesButton")
+const CookiesPopup =  document.querySelector("#acceptCookiesPopup")
+
+ cookiesButton.addEventListener("click",() => {
+  CookiesPopup.classList.add('hidden')
+  ///CookiesPopup.style.display = "none"
+ })
+
   /**
    * Problem 2: Show comments for the news story.
    *
@@ -23,4 +32,20 @@
    * but you can switch up the HTML so that it uses inline styles if you like.
    */
   // Write your answer here
+  const comments = document.querySelector("#comments")
+  const toggleCommentsButton =  document.querySelector("#toggleComments")
+
+
+  toggleCommentsButton.addEventListener("click", () => {
+    //comments.classList.remove('hidden');
+    if(comments.classList.contains('hidden')){
+      comments.classList.remove('hidden');
+      toggleCommentsButton.textContent = "Hide Comments";
+    }else{
+      comments.classList.add('hidden');
+      toggleCommentsButton.textContent = "View Comments";
+    }
+
+  })
+
 })();

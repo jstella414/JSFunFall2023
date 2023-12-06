@@ -38,22 +38,23 @@
         <!-- Capture what the user is type here -->
         <input
           type="text"
-          class="form-control mb-3"
+          id = "userType"
+          class="form-control mb-3 "
           placeholder="Enter mystery text here"
           aria-label="Enter mystery text here"
         />
 
         <!-- Display whatever text the user types in the textbox above inside the <div></div> -->
-        <div class="card bg-warning"></div>
+        <div id = "userTypeDisplay" class="card bg-warning"></div>
       </div>
     </section>
-
     <section class="bg-dark pt-4 pb-2 flex-fill">
       <div class="container">
         <!-- Handle this form -->
-        <form class="form-group">
+        <form id="engineForm" class="form-group">
           <div class="input-group">
             <input
+              id = "search-results"
               type="search"
               placeholder="Search for oceans near Albany, NY"
               aria-label="Search for oceans near Albany, NY"
@@ -66,24 +67,23 @@
         </form>
 
         <!-- Display "No results for ___ found" inside of this <p></p> -->
-        <p class="text-white"></p>
+        <p id = "EngineDisplayText" class="text-white"></p>
       </div>
     </section>
 
     <section class="bg-light pt-4 pb-4 flex-fill">
       <!-- See terms-on-load.png, terms-on-error.png, and terms-on-success.png for examples of what this should look like. -->
       <div class="container d-flex justify-content-center">
-        <form>
+        <form id = "form-checkbox">
           <div class="form-inline">
             <div class="form-check form-check-inline">
               <!-- The "is-invalid" class here makes the "I Agree ..." red. The input should only have this class if the user did not agree to the terms and conditions -->
-              <input class="form-check-input is-invalid" type="checkbox" />
+              <input id ="check-box" class="form-check-input is-invalid" type="checkbox" />
               <label class="form-check-label" for="terms"
-                >I Agree to the Terms and Conditions</label
-              >
+                >I Agree to the Terms and Conditions</label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Continue</button>
+            <button id ="continue-botton" type="submit" class="btn btn-primary">Continue</button>
           </div>
 
           <!-- Only display me if the user did not agree to the terms and conditions -->

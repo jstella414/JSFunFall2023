@@ -25,14 +25,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EXERCISES Creating Elements</title>
-
     <!--
       Optional: Add any CSS libraries or your own CSS here. For example:
       @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link for external files
       @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style for <style> tags
     -->
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+
   </head>
   <body>
     <!-- Put your HTML here -->
+
+    <script>
+      const button = document.createElement("button");
+      button.textContent = "Click Me!";
+      document.querySelector("body").appendChild(button);
+      button.classList.add("btn");
+      button.classList.add("btn-dark");
+      button.classList.add("m-5");
+      button.classList.add("p-2");
+      button.classList.add("center")
+
+      button.addEventListener("click",event =>{
+        alert("Hello! I am an alert box!");
+      })
+        </script>
   </body>
+  
+
 </html>
