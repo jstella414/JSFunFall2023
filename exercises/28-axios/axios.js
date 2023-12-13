@@ -12,4 +12,20 @@
    *    "message": "https://images.dog.ceo/breeds/poodle-toy/n02113624_9550.jpg"
    * }
    */
+  const dogButton =  document.querySelector("#dog-button");
+  const image = document.querySelector('#image')
+  
+  dogButton.addEventListener("click", event => {
+
+    axios({
+      url: "https://dog.ceo/api/breeds/image/random",
+      method: "GET",
+    
+    }).then((response) => {
+      // console.log("hello", response);
+      image.src = response.data.message;
+    }).catch(()=>{})
+  });
+
+
 })();

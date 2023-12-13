@@ -75,39 +75,62 @@ pointlessEngine.addEventListener("submit", event => {
 ////////////////
 
   const checkbox = document.querySelector("#check-box");
-  const continueButton = document.querySelector("#continue-botton")
+  const continueButton = document.querySelector("#continue-button");
   const errorText = document.querySelector(".text-danger");
   const thankYouText = document.querySelector(".text-success");
+  const FormCheckbox = document.querySelector("#form-checkbox");
 
 
   errorText.style.display = "none";
   thankYouText.style.display = "none";
 
-  checkbox.addEventListener("click" , event => {
-    if(checkbox.classList.contains("is-invalid")){
-      checkbox.classList.remove("is-invalid");
-      checkbox.classList.add("is-valid");
-
+  checkbox.addEventListener("click" , event =>{
+    if(checkbox.checked){
+      if(checkbox.classList.contains("is-invalid")){
+        checkbox.classList.add("is-valid");
+        checkbox.classList.remove("is-invalid");
+        console.log("hello");
+      }
     }else{
       checkbox.classList.remove("is-valid");
       checkbox.classList.add("is-invalid");
+      console.log("NOT");
     }
+
   });
 
+ FormCheckbox.addEventListener("submit", (event) => {
 
-  continueButton.addEventListener("click", event =>{
-    event.preventDefault();
-    console.log("hello");
-      if(checkbox.classList.contains("is-invalid")){
-        errorText.style.display = "block";
-        thankYouText.style.display = "none";
 
-      }else{
-        thankYouText.style.display = "block";
-        errorText.style.display = "none";
-      }
+ });
 
-    });
+
+
+  // checkbox.addEventListener("click" , event => {
+  //   if(checkbox.classList.contains("is-invalid")){
+  //     checkbox.classList.remove("is-invalid");
+  //     checkbox.classList.add("is-valid");
+
+  //   }else{
+  //     checkbox.classList.remove("is-valid");
+  //     checkbox.classList.add("is-invalid");
+  //   }
+  // });
+
+
+  // continueButton.addEventListener("click", event =>{
+  //   event.preventDefault();
+  //   console.log("hello");
+  //     if(checkbox.classList.contains("is-invalid")){
+  //       errorText.style.display = "block";
+  //       thankYouText.style.display = "none";
+
+  //     }else{
+  //       thankYouText.style.display = "block";
+  //       errorText.style.display = "none";
+  //     }
+
+  //   });
 
 
 
