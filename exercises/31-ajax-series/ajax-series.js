@@ -17,4 +17,64 @@
    *
    * You must make two AJAX request to solve this problem.
    */
+
+const dropDown = document.querySelector("#dropdown");
+const displayImg = document.querySelector("#get-schwifty")
+const ImgLink = document.querySelector("#main-img")
+const dropdownElement = document.createElement("option");
+const titleText = document.querySelector("#title-head")
+
+
+dropDown.appendChild(dropdownElement);
+
+let htmlStr = "";
+let displayImgstr = "";
+axios({
+  url: "https://rickandmortyapi.com/api/character", 
+  method: "GET",
+
+}).then((response) => {
+  // console.log("hello", response);
+  // console.log(response.data.results)
+  for(let character of response.data.results){
+    htmlStr += `<option value ="${character.id}">${character.name}</option>`;    
+    //console.log(character);
+    // dropdown.addEventListener("click" () =>{
+    //   storedCharacter += htmlStr});
+  }dropDown.innerHTML = htmlStr;
+
+
+
+}).catch(()=>{});
+
+
+//const request = fetch("https://rickandmortyapi.com/api/character/" + e.target.value).then(response)=> response.json
+
+dropdown.addEventListener("change",(e)=>{
+  //const request = fetch("https://rickandmortyapi.com/api/character/" + e.target.value).then(response) => response.json
+  
+  axios({
+    method: 'GET',
+    url: "https://rickandmortyapi.com/api/character/" + e.target.value
+  })
+  .then((response) =>{
+    console.log(response.data);
+    titleText.textContent = response.data.name
+    displayImg.src = response.data.image;
+    displayimg.href = "http://rickandmorty.wikia.com/wiki/Rick_Sanchez$#http://rickandmorty.wikia.com/wiki/Rick_Sanchez"
+  })
+  .catch(err =>{});
+  
+
+
+})
+
+
+
+
 })();
+
+
+
+
+

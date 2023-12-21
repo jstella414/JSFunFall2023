@@ -41,4 +41,99 @@
    *   </td>
    * </tr>
    */
+
+
+const table = document.querySelector("#productTableBody")
+
+const createRow = (product) =>{
+  table.innerHTML += `<tr id ="product-${product.id}">
+  <td>${product.id}</td>
+  <td>${product.title}</td>
+  <td>${product.description}</td>
+  <td>$${product.price.toFixed(2)}</td>
+  <td>${product.discountPercentage}</td>
+  <td>${product.rating}</td>
+  <td>${product.stock}</td>
+  <td>${product.brand}</td>
+  <td>${product.category}</td>
+  <td>
+    <button id = "row-${product.id}" class="btn btn-danger btn-sm delete-product-btn delete-button">Delete</button>
+   </td>
+
+</tr>`
+};
+
+
+
+
+fetch('https://dummyjson.com/products')
+.then(res => res.json())
+.then(response => {
+//console.log(response)
+for(product of response.products){
+  createRow(product);
+
+}
+
+
+
+const deleteButton = document.querySelectorAll(".delete-button")
+
+deleteButton.forEach( button => {
+  button.addEventListener("click",()=>{
+    let buttonID = button.id.replace("row-", "");
+
+    fetch('https://dummyjson.com/products/'+ buttonID, {
+    method: 'DELETE',
+})
+.then(res => res.json())
+.then(response =>{
+  const row = document.querySelector(`#product-${buttonID}`)
+  //console.log(row);
+  row.style.display = "none";
+
+});
+    
+
+  })
+})
+});
+///handle the form when submitted
+//make api request
+//set up successful add item to the table
+
+
+const form = document.querySelector('#productForm')
+const titleInput = document.querySelector('#title')
+
+form.addEventListener("submit", (event) =>{
+event.preventDefault();
+//console.log(event.target.elements) ///gives you all the fields
+const data = {}; 
+for(const elem of event.target.elements){
+  if(elem.id === "price"){
+    data[elem.id] = parseFloat(elem.value);
+  }
+  else if (elem.id !== "addProductBtn"){
+    //console.log(elem, elem.value);//value will give you what was typed in
+  data[elem.id] = elem.value;
+  }
+}
+console.log(data,"DATA")
+
+fetch('https://dummyjson.com/products/add', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(data),
+})
+.then(res => res.json())
+.then((product)=>{
+  product.discountPercentage = data.discountPercentage;
+  console.log(product,"TEST")
+  createRow(product)
+});
+
+})
+
+
 })();
